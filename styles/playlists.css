@@ -50,3 +50,42 @@
     color: gray;
     padding: 15px;
 }
+
+.search-bar{
+    display: inline;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding-left: 30px;
+    margin-bottom:20px ;
+}
+
+.text-box{
+    height:25px;
+    align-items: center;
+    max-width: 600px;
+    background-color: black;
+    border-radius: 20px;
+    flex: 1;
+    color: white;
+    padding: 8px;
+    border:2px solid #38b6ff;
+    border-top-right-radius: 0px ;
+    border-right-width: 1px;
+    border-bottom-right-radius: 0px ;
+
+}
+
+.search-icon{
+    width: 30px;
+    height: 29px;
+    padding:6px;
+    border:2px solid #38b6ff;
+    border-radius: 20px;
+    border-top-left-radius: 0px ;
+    border-bottom-left-radius: 0px ;
+    border-left-width: 2px;
+}
