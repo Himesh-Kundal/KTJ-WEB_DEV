@@ -8,7 +8,7 @@
 
 .intro-details{
     display: flex;
-    flex: 4;
+    flex: 3;
     padding: 10px;
     flex-direction: column;
     justify-content:center;
@@ -20,7 +20,7 @@
     width: 10%;
     padding: 30px;
     border-radius: 100px;
-    flex: 0.75;
+    flex: 1;
     transition: .15s;
     align-self: end;
 }
@@ -45,7 +45,7 @@
 .lottie-animation{
     display: flex;
     justify-content: center;
-    /* flex: 1; */
+    flex: 0.5;
     align-self: center;
 }
 

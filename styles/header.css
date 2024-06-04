@@ -11,6 +11,9 @@
     align-items: center;
     margin: 15px;
     z-index: 1;
+    border-style: solid;
+    border-color: #0062ff;
+    border-width: 1px;
 }
 
 .nav-elements{
