@@ -130,3 +130,31 @@
     border-radius: 20px;
     font-size: large;
 }
+
+.footer{
+    margin-top:15px;
+    background-color:rgb(20,20,20);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 30px;
+}
+
+.social-icon{
+    width: 50px;
+    transition: .15s;
+}
+
+.social-icon:hover{
+    width: 80px;
+    cursor: pointer;
+}
+
+.end-text{
+    color: gray;
+}
