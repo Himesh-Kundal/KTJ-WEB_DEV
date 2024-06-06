@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Music Buddy
+    </title>
+    <link rel="icon" href="resources/logo.webp">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/playlists.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navigation-bar">
+            <a href="#">
+                <img src="resources/music.png" class="logo" alt="logo">
+            </a>
+
+            <a href="#intro-section">
+                <div class="nav-elements">Intro Section</div>
+            </a>
+            <a href="#featured-playlists">
+                <div class="nav-elements">Featured Playlists</div>
+            </a>
+            <a href="#recommended-albums">
+                <div class="nav-elements">Recommended Albums</div>
+            </a>
+            <a href="#user-reviews">
+                <div class="nav-elements">User Reviews</div>
+            </a>
+            <a href="#footer">
+                <div class="nav-elements">Contact US</div>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="intro-section" class="intro-section">
+            <div class="intro-details">
+                <h2 style="color: #38b6ff;">Welcome to Music Buddy</h2>
+                <p>Get ready to discover new sounds, revisit old favorites, and uncover hidden gems! Our expertly
+                    curated playlists are
+                    designed </p> to take you on a sonic journey, introducing you to fresh talent, classic hits, and
+                everything in between.</p>
+                <br>
+                <p style="margin-bottom: 15px;">Explore our curated playlists and find your next obsession!</p>
+                <a href="#featured-playlists" class="intro-featured-playlists">
+                    Featured Playlists
+                </a>
+            </div>
+            <div id="lottie-animation" style="width: 400px; height: 400px;"></div>
+
+            <img src="resources/logo.webp" class="intro-logo" alt="intro-logo">
+        </div>
+
+        <div id="featured-playlists" class="playlist-section">
+            <div>
+                <h2 style="color: #38b6ff;">Featured playlists</h2>
+            </div>
+            <br>
+            <div class="playlists-grid">
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">60</div>
+                        <img class="playlist-image" src="resources/playlist/phonk.jpeg" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Phonk</p>
+                        <p>the beat of your drift</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">30</div>
+                        <img class="playlist-image" src="resources/playlist/rap.jpeg" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Rap Hits</p>
+                        <p>the biggest rap hits of the decade</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">45</div>
+                        <img class="playlist-image" src="resources/playlist/bollywood.jpeg" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Bollywood Hits</p>
+                        <p>let this be your background score to your love story</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">100</div>
+                        <img class="playlist-image" src="resources/playlist/today.jpg" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Today's Top Hits</p>
+                        <p>Experience the vibe</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recommended-albums" class="playlist-section">
+            <h2 style="color: #38b6ff;">Recommended Albums</h2>
+            <br>
+            <div class="search-bar">
+                <div class="search">
+                    <input type="text" class="text-box" placeholder="Search">
+                    <img src="resources/search.png" class="search-icon" alt="search">
+                </div>
+            </div>
+            <br>
+            <div class="playlists-grid">
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">19</div>
+                        <img class="playlist-image" src="resources/Album covers/utopia.jpg" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Utopia</p>
+                        <p>Travis Scott</p>
+                        <p>2023</p>
+                    </div>
+                </div>
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">18</div>
+                        <img class="playlist-image" src="resources/Album covers/starboy.png" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Starboy</p>
+                        <p>the Weeknd</p>
+                        <p>2016</p>
+                    </div>
+                </div>
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">7</div>
+                        <img class="playlist-image" src="resources/Album covers/stillrollin.jpeg" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>Still Rollin</p>
+                        <p>Shubh</p>
+                        <p>2023</p>
+                    </div>
+                </div>
+                <div class="playlist-box">
+                    <div class="playlist-icon">
+                        <div class="playlist-count">14</div>
+                        <img class="playlist-image" src="resources/Album covers/=.png" alt="">
+                    </div>
+                    <div class="playlist-description">
+                        <p>=</p>
+                        <p>Ed Sheeran</p>
+                        <p>2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="user-reviews">
+            <div class="review-and-form">
+                <div>
+                    <h2 style="color: #38b6ff;">User Reviews</h2>
+                </div>
+                <div>
+                    <h2 style="color: #38b6ff;">Your Review</h2><br>
+                </div>
+                <div class="review-grid">
+                    <div class="channel-icon">
+                        <img src="resources/users/user1.png" alt="icon" class="profile-picture">
+                    </div>
+                    <div class="video-details">
+                        <p class="user-title">Emily Johnson</p>
+                        <p class="user-author">Verified User</p>
+                        <p class="user-stats">6.9M Likes &#183; 2 months ago</p>
+                    </div>
+                    <div>
+                        The music library website is a treasure trove for any music enthusiast! The vast collection of
+                        songs
+                        across various
+                        genres is impressive. The user interface is intuitive and easy to navigate. I particularly love
+                        the
+                        personalized
+                        playlists that the website curates for me. Highly recommend it for anyone looking to discover
+                        new
+                        music!
+                    </div>
+                    <div class="channel-icon">
+                        <img src="resources/users/user2.png" alt="icon" class="profile-picture">
+                    </div>
+                    <div class="video-details">
+                        <p class="user-title">Michael Brown</p>
+                        <p class="user-author">Verified User</p>
+                        <p class="user-stats">6.9M Likes &#183; 2 months ago</p>
+                    </div>
+                    <div>
+                        This website has completely transformed my music experience. The sound quality of the tracks is
+                        top-notch, and the
+                        selection is incredible. I found rare tracks from my favorite artists that I couldn't find
+                        anywhere
+                        else. The website
+                        loads quickly, and the customer support team is always ready to help. A fantastic resource for
+                        any
+                        music lover!
+                    </div>
+                    <div class="channel-icon">
+                        <img src="resources/users/user3.png" alt="icon" class="profile-picture">
+                    </div>
+                    <div class="video-details">
+                        <p class="user-title">Sarah Lee</p>
+                        <p class="user-author">Verified User</p>
+                        <p class="user-stats">6.9M Likes &#183; 2 months ago</p>
+                    </div>
+                    <div>
+                        I'm so glad I found this music library website! It has an extensive catalog of music that spans
+                        different eras and
+                        genres. The search functionality is robust, making it easy to find exactly what I'm looking for.
+                        The community features,
+                        like user reviews and ratings, add a great touch. I've discovered so many new artists thanks to
+                        this site.
+                    </div>
+                    <div class="channel-icon">
+                        <img src="resources/users/user4.png" alt="icon" class="profile-picture">
+                    </div>
+                    <div class="video-details">
+                        <p class="user-title">David Martinez</p>
+                        <p class="user-author">Verified User</p>
+                        <p class="user-stats">6.9M Likes &#183; 2 months ago</p>
+                    </div>
+                    <div>
+                        This music library website is hands down the best I've ever used. The seamless streaming
+                        experience and high-quality
+                        audio make it a joy to use. I appreciate the detailed information provided for each track,
+                        including artist bios and
+                        album histories. The website is constantly updated with new releases, keeping my music library
+                        fresh. Highly recommended
+                        for all music aficionados!
+                    </div>
+                </div>
+
+                <div class="form">
+                    <form action="https://httpbin.org/get" method="get">
+                        <fieldset class="form-fieldset">
+                            <legend>Your Review Matters A Lot</legend>
+                            <br>
+                            <p>
+                                <label for="Name">Your Name:</label>
+                                <input type="text" name="Name" id="FirstName" placeholder="Sarah Brown"
+                                    autocomplete="on" required class="form-input" />
+                            </p>
+                            <br>
+                            <p>
+                                <label for="phone">Phone:</label>
+                                <input type="tel" name="phone" id="phone" placeholder="9876598765" pattern="[0-9]{10}"
+                                    required class="form-input" />
+                            </p>
+                            <br>
+                            <p>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Someone@abc.com" required
+                                    class="form-input" />
+                            </p>
+                            <br>
+                            <p>
+                                <label style=" vertical-align: top;" for="message">Your Views:</label>
+                                <textarea style="width: 600px; height: 200px;" name="message" id="message"
+                                    placeholder="Type ur review here." cols="30" rows="3" class="form-input"
+                                    required></textarea>
+                            </p>
+                            <br>
+                            <button type="submit" class="form-button">Submit</button>
+                            <button type="reset" class="form-button">Reset</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <h2 style="color: #38b6ff;">Contact Us</h2>
+        <div class="social-media">
+            <a href="https://github.com/Himesh-Kundal">
+                <img src="resources/social/facebook.png" class="social-icon" alt="">
+            </a>
+            <a href="https://github.com/Himesh-Kundal">
+                <img src="resources/social/instagram.png" class="social-icon" alt="">
+            </a>
+            <a href="https://github.com/Himesh-Kundal">
+                <img src="resources/social/twitter.png" class="social-icon" alt="">
+            </a>
+            <a href="https://github.com/Himesh-Kundal">
+                <img src="resources/social/youtube.png" class="social-icon" alt="">
+            </a>
+        </div>
+        <br>
+        <div class="end-text">
+            <a href="https://github.com/Himesh-Kundal" style="color: gray;" target="_blank">Terms and Conditions</a> &#xb7; 
+            <a href="https://github.com/Himesh-Kundal" style="color: gray;" target="_blank">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px ;">
+            <a href="#" class="nav-elements">Back To Top</a>
+        </div>
+    </footer>
+
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'), // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'resources/anim.json' // the path to the animation json
+        });
+    </script>
+
+</body>
+
+
+</html>
