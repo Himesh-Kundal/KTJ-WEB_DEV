@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-image: linear-gradient(to left,#f42f42,#2fbcf5);
+    background-image: linear-gradient(to left,#f42f42,white,#2fbcf5);
     border-style: none;
     border-radius: 25px;
     align-items: center;

@@ -103,3 +103,12 @@ const play= (cell)=>{
 cells.forEach((cell) => {
     cell.addEventListener("click",play.bind(null,cell));
 });
+
+document.querySelector(".reset-grid-button").addEventListener("click",()=>{
+    jsCell.forEach(cell=>{
+        cell.innerHTML="";
+        cell.dataset.move="";
+    });
+    gameEnded=false;
+    currentPlayer=player1;
+});
