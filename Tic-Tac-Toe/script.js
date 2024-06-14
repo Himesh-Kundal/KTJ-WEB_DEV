@@ -1,5 +1,10 @@
 let gameEnded=false;
 
+const score={
+    player1:0,
+    player2:0,
+}
+
 const table=document.querySelector(".main-table");
 
 const player1={
@@ -43,25 +48,33 @@ for(let i=0;i<9;i++){
     jsCell.push(document.querySelector(`.js-cell-${i+1}`));
 }
 
+const win =(move)=>{
+    console.log(`${move} wins`);
+    gameEnded=true;
+    score[move==="cross"?"player1":"player2"]++;
+    console.log(score);
+}
+
 function check(move){
     for(let i=0;i<3;i++){
         if(jsCell[i].dataset.move===move && jsCell[i+3].dataset.move===move && jsCell[i+6].dataset.move===move){
-            console.log(`${move} wins`);
+            win(move);
             return "stop";
         }
     }
     for(let i=0;i<jsCell.length;i+=3){
         if(jsCell[i].dataset.move===move && jsCell[i+1].dataset.move===move && jsCell[i+2].dataset.move===move){
-            console.log(`${move} wins`);
+            win(move);
             return "stop";
         }
     }
     if(jsCell[0].dataset.move===move && jsCell[4].dataset.move===move && jsCell[8].dataset.move===move){
-        console.log(`${move} wins`);
+        win(move);
         return "stop";
     }
     if(jsCell[2].dataset.move===move && jsCell[4].dataset.move===move && jsCell[6].dataset.move===move){
         console.log(`${move} wins`);
+        win(move);
         return "stop";
     }
     if(jsCell.every(cell=>cell.dataset.move!=="")){
@@ -84,10 +97,6 @@ const play= (cell)=>{
     cell.innerHTML=`${currentPlayer.icon}`;
     cell.dataset.move=currentPlayer.move;
     const result = check(currentPlayer.move);
-    if(result==="stop"){
-        gameEnded=true ;
-        return;
-    }
     currentPlayer=currentPlayer===player1?player2:player1; 
 }
 
