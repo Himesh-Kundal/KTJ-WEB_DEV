@@ -1,6 +1,7 @@
 .header{
     display: flex;
     justify-content: center;
+    height: 100px;
     padding: 10px;
     background-image: linear-gradient(to left,#f42f42,white,#2fbcf5);
     border-style: none;
