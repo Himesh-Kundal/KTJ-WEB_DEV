@@ -27,6 +27,15 @@ if (score) {
   player2.score = 0;
 }
 
+let names = localStorage.getItem("names");
+if (names) {
+  let parsedNames = JSON.parse(names);
+  player1.name = parsedNames.player1 || "Player 1";
+  player2.name = parsedNames.player2 || "Player 2";
+} else {
+    player1.name = "Player 1";
+    player2.name = "Player 2";
+};
 
 let currentPlayer=player1;
 
@@ -219,4 +228,5 @@ document.querySelector(".rename-button").addEventListener("click",()=>{
     player1.name=renamePlayer1.value;
     player2.name=renamePlayer2.value;
     render();
+    localStorage.setItem("names",JSON.stringify({player1:player1.name,player2:player2.name}));
 });

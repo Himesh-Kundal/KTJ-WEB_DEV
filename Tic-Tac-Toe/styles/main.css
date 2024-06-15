@@ -94,3 +94,7 @@
     cursor: pointer;
 }
 
+.result{
+    font-size: 20px;
+    color: rgb(0,255,0);
+}
