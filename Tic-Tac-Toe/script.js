@@ -1,9 +1,5 @@
 let gameEnded=false;
 
-const score={
-    player1:0,
-    player2:0,
-}
 
 const table=document.querySelector(".main-table");
 
@@ -11,12 +7,14 @@ const player1={
     name:"Player 1",
     icon:"<img src='imgs/cross.png' alt='' class='cell-icon'>",
     move:"cross",
+    score:0,
 }
 
 const player2={
     name:"Player 2",
     icon:"<img src='imgs/circle.png' alt='' class='cell-icon'>",
     move:"circle",
+    score:0,
 }
 
 let currentPlayer=player1;
@@ -51,12 +49,16 @@ for(let i=0;i<9;i++){
 const win =(move)=>{
     console.log(`${move} wins`);
     gameEnded=true;
-    score[move==="cross"?"player1":"player2"]++;
-    console.log(score);
+
+    if(move==="cross")player1.score++;
+    else player2.score++;
+
+    console.log(player1.score,player2.score);
     gameEnded=true;
     setTimeout(()=>{
         reset();
     },2000);
+    render();
 }
 
 const draw=()=>{
@@ -64,6 +66,7 @@ const draw=()=>{
     setTimeout(()=>{
         reset();
     },2000);
+    render();
 }
 
 function check(move){
@@ -108,8 +111,9 @@ const play= (cell)=>{
     }
     cell.innerHTML=`${currentPlayer.icon}`;
     cell.dataset.move=currentPlayer.move;
-    const result = check(currentPlayer.move);
+    check(currentPlayer.move);
     currentPlayer=currentPlayer===player1?player2:player1; 
+    render();
 }
 
 cells.forEach((cell) => {
@@ -123,6 +127,50 @@ const reset=()=>{
         });
         gameEnded=false;
         currentPlayer=player1;
+        render();
     }
 
 document.querySelector(".reset-grid-button").addEventListener("click",reset);
+
+document.querySelector(".reset-score-button").addEventListener("click",()=>{
+    player1.score=0;
+    player2.score=0;
+    console.log(player1.score,player2.score);
+    render();
+});
+
+const playerArea=[];
+
+for(let i=1;i<=2;i++){
+    playerArea.push(document.querySelector(`.js-player-area-${i}`));
+}
+
+console.log(playerArea[0],playerArea[1]);
+
+const yourturn=`<h2 class="your-turn">Your Turn</h2>`;
+
+const playerAreaRender=(area,player,otherPlayer)=>{
+    area.innerHTML=`
+    <h2 class="player-name">${player.name}</h2>
+    <div class="player-icon">${player.icon}</div>
+    <h2 class="player-score ">Wins:${player.score}</h2>
+    `;  
+    // console.log(currentPlayer);
+    if(player.score>otherPlayer.score){
+        area.querySelector(".player-score").classList.add("winning-player");
+    }
+    else{
+        area.querySelector(".player-score").classList.remove("winning-player");
+    }
+    if(currentPlayer===player){
+        area.innerHTML+=yourturn;
+    }
+
+};
+
+const render =()=>{
+    playerAreaRender(playerArea[0],player1,player2);
+    playerAreaRender(playerArea[1],player2,player1);
+};
+
+render();

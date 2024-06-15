@@ -8,6 +8,12 @@
     flex: 1;
     border-radius: 25px;
     padding:30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 20px;
+    font-family: roboto;
+    font-size: 30px;
 }
 
 .game-board{
@@ -17,12 +23,12 @@
     flex: 2;
 }
 
-.js-player-1-area{
+.js-player-area-1{
     background-color:#2fbcf5;
     
 }
 
-.js-player-2-area{
+.js-player-area-2{
     background-color:#f42f42;
 }
 
@@ -46,3 +52,22 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+.your-turn{
+    font-size: 20px;
+    color: black;
+    background-color:gold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.winning-player{
+    font-size: 40px;
+    color: black;
+    background-color:gold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
