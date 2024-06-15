@@ -17,6 +17,17 @@ const player2={
     score:0,
 }
 
+let score = localStorage.getItem("score");
+if (score) {
+  let parsedScore = JSON.parse(score);
+  player1.score = parsedScore.player1 || 0;
+  player2.score = parsedScore.player2 || 0;
+} else {
+  player1.score = 0;
+  player2.score = 0;
+}
+
+
 let currentPlayer=player1;
 
 table.innerHTML=`
@@ -59,6 +70,7 @@ const win =(move)=>{
         reset();
     },2000);
     render();
+    renderResult(move==="cross"?player1:player2);
 }
 
 const draw=()=>{
@@ -67,6 +79,7 @@ const draw=()=>{
         reset();
     },2000);
     render();
+    renderResult(null);
 }
 
 function check(move){
@@ -114,6 +127,7 @@ const play= (cell)=>{
     check(currentPlayer.move);
     currentPlayer=currentPlayer===player1?player2:player1; 
     render();
+    localStorage.setItem("score",JSON.stringify({player1:player1.score,player2:player2.score}));
 }
 
 cells.forEach((cell) => {
@@ -137,6 +151,7 @@ document.querySelector(".reset-score-button").addEventListener("click",()=>{
     player2.score=0;
     console.log(player1.score,player2.score);
     render();
+    localStorage.setItem("score",JSON.stringify({player1:player1.score,player2:player2.score}));
 });
 
 const playerArea=[];
@@ -174,3 +189,34 @@ const render =()=>{
 };
 
 render();
+
+const resultBox=document.querySelector(".result");
+const renderResult=(player)=>{
+    if(player===null){
+        resultBox.innerHTML=`
+        <h2 class="result-text">It's a Draw!</h2>
+        `;
+        setTimeout(()=>{
+            resultBox.innerHTML="";
+        },2000);
+    }
+    else{
+        resultBox.innerHTML=`
+        <h2 class="result-text">${player.name} Wins!</h2>
+        `;
+        setTimeout(()=>{
+            resultBox.innerHTML="";
+        },2000);
+    }
+}
+
+const renamePlayer1 = document.querySelector(".rename-player1");
+const renamePlayer2 = document.querySelector(".rename-player2");
+
+console.log(renamePlayer1,renamePlayer2);
+
+document.querySelector(".rename-button").addEventListener("click",()=>{
+    player1.name=renamePlayer1.value;
+    player2.name=renamePlayer2.value;
+    render();
+});
