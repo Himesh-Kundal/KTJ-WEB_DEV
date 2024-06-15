@@ -53,6 +53,17 @@ const win =(move)=>{
     gameEnded=true;
     score[move==="cross"?"player1":"player2"]++;
     console.log(score);
+    gameEnded=true;
+    setTimeout(()=>{
+        reset();
+    },2000);
+}
+
+const draw=()=>{
+    gameEnded=true;
+    setTimeout(()=>{
+        reset();
+    },2000);
 }
 
 function check(move){
@@ -79,6 +90,7 @@ function check(move){
     }
     if(jsCell.every(cell=>cell.dataset.move!=="")){
         console.log("Draw");
+        draw();
         return "stop";
     }
     else{
@@ -104,11 +116,13 @@ cells.forEach((cell) => {
     cell.addEventListener("click",play.bind(null,cell));
 });
 
-document.querySelector(".reset-grid-button").addEventListener("click",()=>{
-    jsCell.forEach(cell=>{
-        cell.innerHTML="";
-        cell.dataset.move="";
-    });
-    gameEnded=false;
-    currentPlayer=player1;
-});
+const reset=()=>{
+        jsCell.forEach(cell=>{
+            cell.innerHTML="";
+            cell.dataset.move="";
+        });
+        gameEnded=false;
+        currentPlayer=player1;
+    }
+
+document.querySelector(".reset-grid-button").addEventListener("click",reset);
